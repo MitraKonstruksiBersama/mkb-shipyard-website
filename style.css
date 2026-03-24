@@ -67,10 +67,35 @@ header {
 .nav-links a.active { color: #f4a261; border-bottom: 2px solid #f4a261; padding-bottom: 4px; }
 
 /* Mobile Adjustments */
+/* Mobile Adjustments (Optimized for space) */
 @media (max-width: 850px) {
-    .top-bar { flex-direction: column; gap: 1.5rem; text-align: center; }
-    .header-brand { flex-direction: column; }
-    .header-contact { justify-content: center; flex-wrap: wrap; gap: 10px; }
+    /* Tightens the white branding bar */
+    .top-bar { 
+        flex-direction: column; 
+        gap: 10px; 
+        padding: 0.8rem 15px; 
+        text-align: center; 
+    }
+    .header-brand { 
+        flex-direction: column; 
+        gap: 8px; 
+    }
+    /* Shrinks the logo and text */
+    .header-logo { height: 55px; } 
+    .header-title { font-size: 1.1rem; }
+    .header-contact { 
+        justify-content: center; 
+        flex-wrap: wrap; 
+        gap: 10px; 
+        font-size: 0.8rem; 
+    }
+    /* Shrinks the ISO badge */
+    .header-cert img { height: 45px; margin-top: 5px; } 
+    
+    /* Tightens the blue navigation bar */
+    .main-nav { padding: 0.5rem 0; }
+    .nav-container { justify-content: center; } /* Centers links on mobile */
+    .nav-links { gap: 15px; font-size: 0.9rem; }
 }
 /* =========================================
    3. HERO, METRICS & CTA
