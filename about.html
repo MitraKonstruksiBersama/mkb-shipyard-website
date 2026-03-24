@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | PT. MKB</title>
+    <meta name="description" content="Learn about PT. MKB's vision, mission, and our motto of Speed and Quality in the Batam shipbuilding industry.">
+    <link rel="icon" href="MKB.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="header-brand">
+                <img src="MKB.png" alt="PT. MKB Logo" class="header-logo">
+                <div class="header-text">
+                    <span class="header-title">PT Mitra Konstruksi Bersama</span>
+                    <span class="header-contact">
+                        <span><i class="fa-solid fa-envelope"></i> ptmitrakonstruksi2022@gmail.com</span>
+                        <span><i class="fa-solid fa-phone"></i> +62 (Insert Number Here)</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="header-cert">
+                <img src="iso9001.jpeg" alt="ISO 9001 Certified" class="iso-logo">
+            </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero hidden" style="background-image: linear-gradient(rgba(11, 61, 145, 0.85), rgba(26, 37, 47, 0.85)), url('https://picsum.photos/seed/welder/1200/600');">
+            <h1>About Our Company</h1>
+            <p>Established on October 11, 2022, in the heart of the Batam maritime hub, PT Mitra Konstruksi Bersama was founded on a vision of engineering excellence. As a fully licensed entity under the BP Batam Free Trade Zone Authority, we have rapidly emerged as a premier partner for global ship owners seeking high-performance marine solutions.</p>
+        </div>
+
+        <section class="hidden">
+            <div class="vision-mission-wrapper">
+                <div class="vm-card">
+                    <h2><i class="fa-solid fa-eye"></i> Our Vision</h2>
+                    <p>To be the premier international benchmark for shipbuilding excellence, recognized globally for uncompromising quality, professional integrity, and world-class maritime engineering.</p>
+                </div>
+                <div class="vm-card delay-1">
+                    <h2><i class="fa-solid fa-bullseye"></i> Our Mission</h2>
+                    <ul class="vm-list">
+                        <li><i class="fa-solid fa-check"></i> <strong>Customer Focus:</strong> Dedicating ourselves to client needs through integrated, continuously improving services to achieve maximum satisfaction.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Continuous Improvement:</strong> Continuously advancing our synergy, operational performance, and workmanship.</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Modernization:</strong> Building a robust, modern, and updated fleet while prioritizing efficiency and safety at every step.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="hidden delay-1">
+            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 2rem;">Our Motto</h2>
+            <div class="cap-grid">
+                <div class="cap-card">
+                    <h3><i class="fa-solid fa-stopwatch"></i> SPEED</h3>
+                    <p>We prioritize synchronized efficiency to meet the most demanding maritime schedules. By integrating advanced project management with rapid execution, we ensure your fleet returns to operation on time, every time—with zero compromise on safety or structural integrity.</p>
+                </div>
+                <div class="cap-card delay-1">
+                    <h3><i class="fa-solid fa-award"></i> QUALITY</h3>
+                    <p>Quality is the cornerstone of our maritime legacy. From the selection of premium-grade steel to the application of advanced BKI-standard fabrication techniques, we ensure that every hull and system we deliver maintains peak structural integrity—empowering our clients to navigate the world’s oceans with absolute confidence and safety.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-banner hidden">
+            <h2>Partner with a shipyard that values your time.</h2>
+            <a href="index.html#contact" class="cta-button">Contact Us Today</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <div>
+                <p><i class="fa-solid fa-industry"></i> <span><strong>Yard Office:</strong><br>Jl. Brigjen Katamso KM.6, Tanjung Uncang - Batam, Kepulauan Riau 29432</span></p>
+            </div>
+            
+            <div>
+                <p><i class="fa-solid fa-building"></i> <span><strong>Head Office:</strong><br>Jl. Plamo Garden Blok M No.2 Batam Center, Baloi Permai, Batam Kota</span></p>
+            </div>
+            
+            <div>
+                <p><i class="fa-solid fa-envelope"></i> <span>ptmitrakonstruksi2022@gmail.com</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span>+62 (Insert Number Here)</span></p>
+            </div>
+        </div>
+        <p>© 2026 PT Mitra Konstruksi Bersama. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('show'); } });
+        });
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>

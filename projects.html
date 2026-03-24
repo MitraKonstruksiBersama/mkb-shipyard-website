@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | PT. MKB</title>
+    <meta name="description" content="View PT Mitra Konstruksi Bersama's recent shipbuilding projects, including BKI Class Barges, SPOBs, and Tugboats.">
+    <link rel="icon" href="MKB.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="header-brand">
+                <img src="MKB.png" alt="PT. MKB Logo" class="header-logo">
+                <div class="header-text">
+                    <span class="header-title">PT Mitra Konstruksi Bersama</span>
+                    <span class="header-contact">
+                        <span><i class="fa-solid fa-envelope"></i> ptmitrakonstruksi2022@gmail.com</span>
+                        <span><i class="fa-solid fa-phone"></i> +62 (Insert Number Here)</span>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="header-cert">
+                <img src="iso9001.jpeg" alt="ISO 9001 Certified" class="iso-logo">
+            </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main Navigation">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero hidden" style="background-image: linear-gradient(rgba(11, 61, 145, 0.85), rgba(26, 37, 47, 0.85)), url('https://picsum.photos/seed/crane/1200/600');">
+            <h1>Our Projects</h1>
+            <p>A showcase of our recent new builds and constructions, executed with our signature commitment to speed and quality.</p>
+        </div>
+
+        <article class="case-study-card hidden">
+            <img src="https://picsum.photos/seed/barge1/800/600" alt="FORTUNA 2301 Barge Construction" loading="lazy">
+            <div class="case-content">
+                <h3>Deck Cargo Barge<br>FORTUNA 2301</h3>
+                <h4>Classification:</h4>
+                <p>BKI Class Certified</p>
+                <h4>Vessel Specifications</h4>
+                <p>230ft x 74ft x 16ft</p>
+            </div>
+        </article>
+
+        <article class="case-study-card hidden delay-1">
+            <img src="https://picsum.photos/seed/spob/800/600" alt="KSM POWER XX SPOB Vessel" loading="lazy">
+            <div class="case-content">
+                <h3>Harbour Tug - KSM POWER XX</h3>
+                <h4>Classification:</h4>
+                <p>BKI Class Certified</p>
+                <h4>Vessel Specifications</h4>
+                <p>Length: 32m <br>Engine: 1600 HP x 2 </p>
+            </div>
+        </article>
+
+        <article class="case-study-card hidden">
+            <img src="https://picsum.photos/seed/barge2/800/600" alt="230ft Barge Construction" loading="lazy">
+            <div class="case-content">
+                <h3>Container Barge - INDO SUKSES 120</h3>
+                <h4>Classification:</h4>
+                <p>BKI Class Certified</p>
+                <h4>Vessel Specifications</h4>
+                <p>250ft x 80ft x 16ft Barge</p>
+            </div>
+        </article>
+
+        <article class="case-study-card hidden delay-1">
+            <img src="https://picsum.photos/seed/tug/800/600" alt="28 Meter Tugboat" loading="lazy">
+            <div class="case-content">
+                <h3>SPOB - PAHALA 88</h3>
+                <h4>Classification:</h4>
+                <p>BKI Class Certified</p>
+                <h4>Vessel Specifications</h4>
+                <p>5700KL</p>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <div>
+                <p><i class="fa-solid fa-industry"></i> <span><strong>Yard Office:</strong><br>Jl. Brigjen Katamso KM.6, Tanjung Uncang - Batam, Kepulauan Riau 29432</span></p>
+            </div>
+            
+            <div>
+                <p><i class="fa-solid fa-building"></i> <span><strong>Head Office:</strong><br>Jl. Plamo Garden Blok M No.2 Batam Center, Baloi Permai, Batam Kota</span></p>
+            </div>
+            
+            <div>
+                <p><i class="fa-solid fa-envelope"></i> <span>ptmitrakonstruksi2022@gmail.com</span></p>
+                <p><i class="fa-solid fa-phone"></i> <span>+62 (Insert Number Here)</span></p>
+            </div>
+        </div>
+        <p>© 2026 PT Mitra Konstruksi Bersama. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('show'); } });
+        });
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
