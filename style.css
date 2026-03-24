@@ -66,56 +66,58 @@ header {
 .nav-links a:hover { color: #f4a261; }
 .nav-links a.active { color: #f4a261; border-bottom: 2px solid #f4a261; padding-bottom: 4px; }
 
-/* Mobile Adjustments (Logo Left, ISO Right) */
+/* Mobile Adjustments (Inline Row: Logo - Text - ISO) */
 @media (max-width: 850px) {
     .top-bar { 
         display: grid; 
-        grid-template-columns: 1fr 1fr; /* Creates two equal columns */
-        grid-template-areas: 
-            "logo cert" 
-            "text text"; /* Text spans across the bottom */
-        gap: 10px; 
-        padding: 1rem 20px; 
+        grid-template-columns: auto 1fr auto; /* Creates Left, Middle, Right columns */
+        gap: 8px; 
+        padding: 0.8rem 10px; /* Tighter padding to maximize screen width */
         align-items: center;
     }
     
     .header-brand { 
-        display: contents; /* Unboxes the logo and text so they join the grid */
+        display: contents; /* Unboxes elements to sit directly in the grid */
     }
     
     .header-logo { 
-        grid-area: logo; 
-        justify-self: start; /* Pushes logo to the far left */
-        height: 50px; 
-    }
-    
-    .header-cert { 
-        grid-area: cert; 
-        justify-self: end; /* Pushes ISO badge to the far right */
-    }
-    
-    .header-cert img { 
-        height: 50px; 
-        margin-top: 0; 
+        grid-column: 1; 
+        height: 40px; /* Scaled down slightly to fit the row */
+        width: auto;
     }
     
     .header-text { 
-        grid-area: text; 
+        grid-column: 2; 
         text-align: center; 
-        margin-top: 5px; 
+        display: flex;
+        flex-direction: column;
     }
     
-    .header-title { font-size: 1.15rem; }
+    .header-title { 
+        font-size: 0.9rem; /* Scaled down to prevent text wrapping awkwardly */
+        line-height: 1.1;
+    }
+    
     .header-contact { 
-        justify-content: center; 
-        flex-wrap: wrap; 
-        gap: 10px; 
-        font-size: 0.85rem; 
+        flex-direction: column; /* Stacks email and phone to save horizontal space */
+        gap: 2px; 
+        font-size: 0.7rem; 
+        margin-top: 4px;
+        font-weight: 500;
+    }
+    
+    .header-cert { 
+        grid-column: 3; 
+    }
+    
+    .header-cert img { 
+        height: 40px; /* Matches the logo height */
+        margin-top: 0; 
     }
     
     /* Navigation Bar */
     .main-nav { padding: 0.6rem 0; }
-    .nav-container { justify-content: center; } /* Centers links on mobile */
+    .nav-container { justify-content: center; } 
     .nav-links { gap: 15px; font-size: 0.9rem; }
 }
 
