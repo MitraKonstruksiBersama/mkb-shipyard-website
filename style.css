@@ -66,37 +66,59 @@ header {
 .nav-links a:hover { color: #f4a261; }
 .nav-links a.active { color: #f4a261; border-bottom: 2px solid #f4a261; padding-bottom: 4px; }
 
-/* Mobile Adjustments */
-/* Mobile Adjustments (Optimized for space) */
+/* Mobile Adjustments (Logo Left, ISO Right) */
 @media (max-width: 850px) {
-    /* Tightens the white branding bar */
     .top-bar { 
-        flex-direction: column; 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+        grid-template-areas: 
+            "logo cert" 
+            "text text"; /* Text spans across the bottom */
         gap: 10px; 
-        padding: 0.8rem 15px; 
-        text-align: center; 
+        padding: 1rem 20px; 
+        align-items: center;
     }
+    
     .header-brand { 
-        flex-direction: column; 
-        gap: 8px; 
+        display: contents; /* Unboxes the logo and text so they join the grid */
     }
-    /* Shrinks the logo and text */
-    .header-logo { height: 55px; } 
-    .header-title { font-size: 1.1rem; }
+    
+    .header-logo { 
+        grid-area: logo; 
+        justify-self: start; /* Pushes logo to the far left */
+        height: 50px; 
+    }
+    
+    .header-cert { 
+        grid-area: cert; 
+        justify-self: end; /* Pushes ISO badge to the far right */
+    }
+    
+    .header-cert img { 
+        height: 50px; 
+        margin-top: 0; 
+    }
+    
+    .header-text { 
+        grid-area: text; 
+        text-align: center; 
+        margin-top: 5px; 
+    }
+    
+    .header-title { font-size: 1.15rem; }
     .header-contact { 
         justify-content: center; 
         flex-wrap: wrap; 
         gap: 10px; 
-        font-size: 0.8rem; 
+        font-size: 0.85rem; 
     }
-    /* Shrinks the ISO badge */
-    .header-cert img { height: 45px; margin-top: 5px; } 
     
-    /* Tightens the blue navigation bar */
-    .main-nav { padding: 0.5rem 0; }
+    /* Navigation Bar */
+    .main-nav { padding: 0.6rem 0; }
     .nav-container { justify-content: center; } /* Centers links on mobile */
     .nav-links { gap: 15px; font-size: 0.9rem; }
 }
+
 /* =========================================
    3. HERO, METRICS & CTA
    ========================================= */
